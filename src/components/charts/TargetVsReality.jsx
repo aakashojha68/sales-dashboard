@@ -15,7 +15,7 @@ export default function TargetVsReality() {
     <div className="dashboard-card h-full">
       <h3 className="text-lg font-bold text-text-primary mb-4">Target vs Reality</h3>
       <ResponsiveContainer width="100%" height={200}>
-        <BarChart data={targetVsRealityData} barGap={2} barSize={10}>
+        <BarChart data={targetVsRealityData} barGap={2} barSize={10} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#E9EDF7" vertical={false} />
           <XAxis
             dataKey="month"

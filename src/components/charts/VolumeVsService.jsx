@@ -15,7 +15,7 @@ export default function VolumeVsService() {
     <div className="dashboard-card h-full">
       <h3 className="text-lg font-bold text-text-primary mb-4">Volume vs Service Level</h3>
       <ResponsiveContainer width="100%" height={200}>
-        <BarChart data={volumeVsServiceData} barGap={2} barSize={14}>
+        <BarChart data={volumeVsServiceData} barGap={2} barSize={14} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#E9EDF7" vertical={false} />
           <XAxis
             dataKey="month"

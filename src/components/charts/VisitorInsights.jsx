@@ -22,7 +22,7 @@ export default function VisitorInsights() {
     <div className="dashboard-card h-full">
       <h3 className="text-lg font-bold text-text-primary mb-4">Visitor Insights</h3>
       <ResponsiveContainer width="100%" height={200}>
-        <LineChart data={visitorInsightsData}>
+        <LineChart data={visitorInsightsData} margin={{ top: 10, right: 10, left: -25, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#E9EDF7" vertical={false} />
           <XAxis
             dataKey="month"
@@ -34,6 +34,8 @@ export default function VisitorInsights() {
             axisLine={false}
             tickLine={false}
             tick={{ fill: 'var(--color-text-secondary)', fontSize: 11 }}
+            width={"100%"}
+            tickMargin={0}
           />
           <Tooltip
             contentStyle={{
