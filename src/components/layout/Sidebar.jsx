@@ -34,8 +34,8 @@ export default function Sidebar() {
 
   const navItemClass = (isActive) =>
     `flex items-center gap-4 px-4 py-3 rounded-[12px] text-[14px] font-semibold transition-all duration-300 group ${isActive
-      ? 'bg-[#5D5FEF] text-white shadow-md shadow-[#5D5FEF]/20'
-      : 'text-text-secondary hover:text-[#5D5FEF] hover:bg-[#5D5FEF]/5'
+      ? 'bg-brand text-white shadow-md shadow-brand/20'
+      : 'text-text-secondary hover:text-brand hover:bg-brand/5'
     }`
 
   return (
@@ -43,10 +43,10 @@ export default function Sidebar() {
       }`}>
       {/* Logo Section */}
       <div className="flex items-center gap-3 px-6 py-6">
-        <div className="w-9 h-9 rounded-lg bg-[#5D5FEF] flex items-center justify-center shadow-lg shadow-[#5D5FEF]/20">
+        <div className="w-9 h-9 rounded-lg bg-brand flex items-center justify-center shadow-lg shadow-brand/20">
           <HiMiniLink className="text-white text-lg" />
         </div>
-        <span className="text-xl font-bold text-[#2B3674] tracking-tight">Dabang</span>
+        <span className="text-xl font-bold text-text-primary tracking-tight">Dabang</span>
       </div>
 
       {/* Navigation */}
@@ -79,7 +79,7 @@ export default function Sidebar() {
       </nav>
 
       {/* Pro Banner */}
-      <div className="mx-4 mb-6 p-5 rounded-[20px] bg-gradient-to-br from-[#5D5FEF] to-[#7174F8] text-white relative overflow-hidden text-center">
+      <div className="mx-4 mb-6 p-5 rounded-[20px] bg-linear-to-br from-brand to-[#7174F8] text-white relative overflow-hidden text-center">
         {/* Decorative circle */}
         <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mx-auto mb-3">
           <HiMiniLink className="text-xl text-white" />
@@ -90,7 +90,7 @@ export default function Sidebar() {
           Get access to all features on tetumbas
         </p>
 
-        <button className="w-full py-2.5 bg-white text-[#5D5FEF] rounded-[10px] text-[11px] font-bold shadow-lg hover:shadow-xl transition-all duration-300 active:scale-[0.98]">
+        <button className="w-full py-2.5 bg-white text-brand rounded-[10px] text-[11px] font-bold shadow-lg hover:shadow-xl transition-all duration-300 active:scale-[0.98]">
           Get Pro
         </button>
       </div>

@@ -6,11 +6,11 @@ export default function Layout({ children }) {
   const { isSidebarOpen, closeSidebar } = useSidebar()
 
   return (
-    <div className="flex min-h-screen bg-[#F4F7FE] relative">
+    <div className="flex min-h-screen bg-body-bg relative">
       {/* Sidebar Backdrop (Mobile Only) */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[45] lg:hidden transition-opacity duration-300"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-45 lg:hidden transition-opacity duration-300"
           onClick={closeSidebar}
         />
       )}

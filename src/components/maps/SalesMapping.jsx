@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
 export default function SalesMapping() {
   return (
     <div className="dashboard-card h-full">
-      <h3 className="text-lg font-bold text-[#2B3674] mb-4">Sales Mapping by Country</h3>
+      <h3 className="text-lg font-bold text-text-primary mb-4">Sales Mapping by Country</h3>
       <ResponsiveContainer width="100%" height={180}>
         <PieChart>
           <Pie

@@ -18,10 +18,10 @@ export default function Dashboard() {
         <div className="xl:col-span-3 bg-white p-6 rounded-3xl shadow-sm border border-gray-50">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div>
-              <h3 className="text-xl font-bold text-[#151D48] tracking-tight">Today's Sales</h3>
-              <p className="text-[13px] font-medium text-[#737791] mt-0.5">Sales Summary</p>
+              <h3 className="text-xl font-bold text-text-highlight tracking-tight">Today's Sales</h3>
+              <p className="text-[13px] font-medium text-text-muted mt-0.5">Sales Summary</p>
             </div>
-            <button className="flex items-center justify-center gap-2 px-4 py-2 border border-[#C5C7CD] rounded-xl text-[12px] font-bold text-[#151D48] hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
+            <button className="flex items-center justify-center gap-2 px-4 py-2 border border-[#C5C7CD] rounded-xl text-[12px] font-bold text-text-highlight hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
               <HiOutlineArrowUpTray className="text-lg group-hover:-translate-y-0.5 transition-transform" />
               Export
             </button>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { MdSearch, MdFilterList, MdSwapVert, MdErrorOutline, MdRefresh, MdPeople } from 'react-icons/md'
-import { FETCH_USERS_ENDPOINT } from '../helper/helper'
+import { ALL_CITIES, FETCH_USERS_ENDPOINT } from '../helper/helper'
 
 export default function Order() {
   const [users, setUsers] = useState([])
@@ -10,7 +10,7 @@ export default function Order() {
   // Filter & Sort States
   const [searchTerm, setSearchTerm] = useState('')
   const [sortOrder, setSortOrder] = useState('asc') // 'asc' | 'desc'
-  const [cityFilter, setCityFilter] = useState('All')
+  const [cityFilter, setCityFilter] = useState(ALL_CITIES)
 
   // Fetch Users
   const fetchUsers = async () => {
@@ -35,7 +35,7 @@ export default function Order() {
   // Derive unique cities for the filter
   const cities = useMemo(() => {
     const list = users.map(u => u.address.city).sort();
-    return ['All', ...new Set(list)]
+    return [ALL_CITIES, ...new Set(list)]
   }, [users])
 
   // Processed Users (Search -> Filter -> Sort)
@@ -52,7 +52,7 @@ export default function Order() {
     }
 
     // 2. Filter (City)
-    if (cityFilter !== 'All') {
+    if (cityFilter !== ALL_CITIES) {
       result = result.filter(u => u.address.city === cityFilter)
     }
 
@@ -189,7 +189,7 @@ export default function Order() {
                   >
                     <td className="px-6 py-3">
                       <div className="flex items-center gap-3">
-                        <div className="w-8.5 h-8.5 rounded-xl bg-gradient-to-br from-brand/10 to-brand/20 flex items-center justify-center text-brand font-bold text-[12px] border border-brand/10">
+                        <div className="w-8.5 h-8.5 rounded-xl bg-linear-to-br from-brand/10 to-brand/20 flex items-center justify-center text-brand font-bold text-[12px] border border-brand/10">
                           {user.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                         </div>
                         <span className="text-[13px] font-bold text-text-highlight group-hover:text-brand transition-colors">{user.name}</span>
@@ -215,7 +215,7 @@ export default function Order() {
                       <p className="text-sm font-bold text-text-highlight">No customers found</p>
                       <p className="text-[11px] text-text-muted mt-1">Try adjusting your filters or search term</p>
                       <button
-                        onClick={() => { setSearchTerm(''); setCityFilter('All'); }}
+                        onClick={() => { setSearchTerm(''); setCityFilter(ALL_CITIES); }}
                         className="mt-4 text-[12px] font-black uppercase text-brand hover:underline"
                       >
                         Clear all filters

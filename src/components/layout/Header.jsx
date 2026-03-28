@@ -28,11 +28,11 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <button
           onClick={toggleSidebar}
-          className="lg:hidden p-2 text-[#2B3674] hover:text-[#5D5FEF] transition-all"
+          className="lg:hidden p-2 text-text-primary hover:text-brand transition-all"
         >
           <HiMenuAlt2 className="text-xl" />
         </button>
-        <h1 className="text-xl md:text-2xl font-bold text-[#2B3674] tracking-tight whitespace-nowrap">
+        <h1 className="text-xl md:text-2xl font-bold text-text-primary tracking-tight whitespace-nowrap">
           {getHeaderTitle()}
         </h1>
       </div>
@@ -40,11 +40,11 @@ export default function Header() {
       {/* Middle Area: Search Bar */}
       <div className="hidden md:flex flex-1 max-w-[400px] mx-8">
         <div className="relative w-full group">
-          <MdSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary text-xl transition-colors group-focus-within:text-[#5D5FEF]" />
+          <MdSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary text-xl transition-colors group-focus-within:text-brand" />
           <input
             type="text"
             placeholder="Search here..."
-            className="w-full pl-12 pr-4 py-2.5 bg-[#F9FAFB] rounded-xl text-sm font-medium text-[#2B3674] placeholder-text-secondary border border-transparent focus:border-[#5D5FEF]/20 focus:bg-white transition-all duration-300 outline-none"
+            className="w-full pl-12 pr-4 py-2.5 bg-bg-soft rounded-xl text-sm font-medium text-text-primary placeholder-text-secondary border border-transparent focus:border-brand/20 focus:bg-white transition-all duration-300 outline-none"
           />
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function Header() {
       {/* Right Area: Actions */}
       <div className="flex items-center gap-2 md:gap-5">
         {/* Language */}
-        <button className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-[#2B3674] hover:text-[#5D5FEF] transition-all">
+        <button className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-text-primary hover:text-brand transition-all">
           <img src="https://img.icons8.com/color/48/usa.png" alt="US Flag" className="w-5 h-5 object-contain" />
           <span className="text-xs">Eng (US)</span>
           <MdKeyboardArrowDown className="text-lg text-text-secondary" />
@@ -66,7 +66,7 @@ export default function Header() {
 
         {/* User Profile */}
         <div className="flex items-center gap-3 pl-2 cursor-pointer group">
-          <div className="w-10 h-10 rounded-full border-2 border-[#5D5FEF]/20 p-0.5 group-hover:border-[#5D5FEF] transition-all overflow-hidden">
+          <div className="w-10 h-10 rounded-full border-2 border-brand/20 p-0.5 group-hover:border-brand transition-all overflow-hidden">
             <img
               src="https://randomuser.me/api/portraits/men/32.jpg"
               alt="Musfiq"
@@ -74,10 +74,10 @@ export default function Header() {
             />
           </div>
           <div className="hidden lg:block text-left">
-            <p className="text-[13px] font-bold text-[#2B3674] leading-tight group-hover:text-[#5D5FEF] transition-colors">Musfiq</p>
+            <p className="text-[13px] font-bold text-text-primary leading-tight group-hover:text-brand transition-colors">Musfiq</p>
             <p className="text-[11px] font-semibold text-text-secondary">Admin</p>
           </div>
-          <MdKeyboardArrowDown className="text-text-secondary text-lg hidden sm:block group-hover:text-[#2B3674] transition-colors" />
+          <MdKeyboardArrowDown className="text-text-secondary text-lg hidden sm:block group-hover:text-text-primary transition-colors" />
         </div>
       </div>
     </header>

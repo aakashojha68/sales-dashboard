@@ -3,7 +3,7 @@ import { topProductsData } from '../../data/mockData'
 export default function TopProducts() {
   return (
     <div className="dashboard-card h-full">
-      <h3 className="text-lg font-bold text-[#2B3674] mb-5">Top Products</h3>
+      <h3 className="text-lg font-bold text-text-primary mb-5">Top Products</h3>
       <table className="w-full">
         <thead>
           <tr className="text-left">
@@ -15,11 +15,11 @@ export default function TopProducts() {
         </thead>
         <tbody>
           {topProductsData.map((product) => (
-            <tr key={product.rank} className="border-t border-[#F4F7FE]">
+            <tr key={product.rank} className="border-t border-body-bg">
               <td className="py-3.5 text-sm font-medium text-text-secondary">{product.rank}</td>
-              <td className="py-3.5 text-sm font-medium text-[#2B3674]">{product.name}</td>
+              <td className="py-3.5 text-sm font-medium text-text-primary">{product.name}</td>
               <td className="py-3.5 pr-4">
-                <div className="w-full bg-[#F4F7FE] rounded-full h-1.5">
+                <div className="w-full bg-body-bg rounded-full h-1.5">
                   <div
                     className="h-1.5 rounded-full transition-all duration-500"
                     style={{
