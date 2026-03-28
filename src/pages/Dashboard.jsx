@@ -1,13 +1,17 @@
+import React, { Suspense, lazy } from 'react'
 import { HiOutlineArrowUpTray } from 'react-icons/hi2'
 import StatCard from '../components/cards/StatCard'
-import VisitorInsights from '../components/charts/VisitorInsights'
-import TotalRevenue from '../components/charts/TotalRevenue'
-import CustomerSatisfaction from '../components/charts/CustomerSatisfaction'
-import TargetVsReality from '../components/charts/TargetVsReality'
 import TopProducts from '../components/tables/TopProducts'
-import SalesMapping from '../components/maps/SalesMapping'
-import VolumeVsService from '../components/charts/VolumeVsService'
+import ChartSkeleton from '../components/charts/ChartSkeleton'
 import { todaySalesData } from '../data/mockData'
+
+// Lazy load chart components
+const VisitorInsights = lazy(() => import('../components/charts/VisitorInsights'))
+const TotalRevenue = lazy(() => import('../components/charts/TotalRevenue'))
+const CustomerSatisfaction = lazy(() => import('../components/charts/CustomerSatisfaction'))
+const TargetVsReality = lazy(() => import('../components/charts/TargetVsReality'))
+const VolumeVsService = lazy(() => import('../components/charts/VolumeVsService'))
+const SalesMapping = lazy(() => import('../components/maps/SalesMapping'))
 
 export default function Dashboard() {
   return (
@@ -43,16 +47,24 @@ export default function Dashboard() {
 
         {/* Visitor Insights */}
         <div className="xl:col-span-2">
-          <VisitorInsights />
+          <Suspense fallback={<ChartSkeleton height="200px" />}>
+            <VisitorInsights />
+          </Suspense>
         </div>
       </div>
 
       {/* Row 2: Total Revenue + Customer Satisfaction + Target vs Reality */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
-        <TotalRevenue />
-        <CustomerSatisfaction />
+        <Suspense fallback={<ChartSkeleton height="250px" />}>
+          <TotalRevenue />
+        </Suspense>
+        <Suspense fallback={<ChartSkeleton height="250px" />}>
+          <CustomerSatisfaction />
+        </Suspense>
         <div className="md:col-span-2 xl:col-span-1">
-          <TargetVsReality />
+          <Suspense fallback={<ChartSkeleton height="250px" />}>
+            <TargetVsReality />
+          </Suspense>
         </div>
       </div>
 
@@ -61,8 +73,12 @@ export default function Dashboard() {
         <div className="md:col-span-2 xl:col-span-1">
           <TopProducts />
         </div>
-        <SalesMapping />
-        <VolumeVsService />
+        <Suspense fallback={<ChartSkeleton height="300px" />}>
+          <SalesMapping />
+        </Suspense>
+        <Suspense fallback={<ChartSkeleton height="200px" />}>
+          <VolumeVsService />
+        </Suspense>
       </div>
     </div>
   )

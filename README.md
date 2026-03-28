@@ -1,33 +1,36 @@
-# React + Vite
+# Sales Dashboard 📊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance sales analytics dashboard built with React 19 and Tailwind CSS 4.
 
-Currently, two official plugins are available:
+## Project Setup & Flow
+1. **Initial Setup**: Created the React project using Vite for a lightning-fast development experience.
+   ```bash
+   npm create vite@latest sales-dashboard -- --template react
+   ```
+2. **Library Installation**: Installed core dependencies including navigation, icons, and professional charting tools.
+   - `react-router-dom`: For seamless SPA routing and layout management.
+   - `recharts`: For high-performance, interactive data visualizations.
+   - `react-icons`: For a comprehensive, consistent iconography system.
+   - `tailwindcss` & `@tailwindcss/vite`: For the modern, utility-first design system.
+   - `rollup-plugin-visualizer`: For monitoring and optimizing the bundle size.
+3. **Shell Design**: Developed the premium sidebar and header layout with unified routing.
+4. **Dashboard Implementation**: Built the main analytics view with a responsive, card-based layout.
+5. **Advanced Data Table**: Implemented a dynamic table in the Orders tab with:
+   - Client-side sorting, searching, and city-based filtering.
+   - Professional skeleton loading states and empty data handling.
+   - Error handling for API fetch failures.
+6. **Performance Optimization**: Implemented granular lazy-loading and shimmer effects for heavy chart components to ensure near-instant initial load times.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **Framework**: React 19 (Vite)
+- **Styling**: Tailwind CSS 4 (Vanilla CSS variables)
+- **Charts**: Recharts (with Custom Customizations)
+- **Icons**: React Icons (Material Design & Hi2)
+- **Routing**: React Router 7
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-
-## Project setup & flow
-1. Created react project using vite
-2. Installed all the required libraries with routing setup
-3. Made sidebar & header design with static data
-4. Made dashboard with other components
-5. Implemented data table in orders tab with features - sorting, searching, filtering, skeleton loading, error handling.
-
-
-# Need TO DO
-1. make a common grid and use it in order table.
-2. work on pagination in grid.
-3. dropdown styling need to update
-4. Map Card is pending at dashboard.
-5. Some styling changes are pending in chart cards at dashboard
-6. Can design a Internet Connectivity issue hanlding page
+## 📋 Need TO DO
+- [ ] **Common Grid**: Create a reusable grid component and integrate it into the Order table.
+- [ ] **Pagination**: Implement robust pagination logic for the data grid.
+- [ ] **Dropdown Overhaul**: Update the styling of filter and sort dropdowns to match the premium theme.
+- [ ] **Map Integration**: Complete the pending Country Map Card on the dashboard.s
+- [ ] **Connectivity Handling**: Design and implement a global "No Internet" issues handling page.
