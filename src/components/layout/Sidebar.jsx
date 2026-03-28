@@ -35,7 +35,7 @@ export default function Sidebar() {
   const navItemClass = (isActive) =>
     `flex items-center gap-4 px-4 py-3 rounded-[12px] text-[14px] font-semibold transition-all duration-300 group ${isActive
       ? 'bg-[#5D5FEF] text-white shadow-md shadow-[#5D5FEF]/20'
-      : 'text-[#A3AED0] hover:text-[#5D5FEF] hover:bg-[#5D5FEF]/5'
+      : 'text-text-secondary hover:text-[#5D5FEF] hover:bg-[#5D5FEF]/5'
     }`
 
   return (

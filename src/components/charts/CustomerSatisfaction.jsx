@@ -12,17 +12,17 @@ import { customerSatisfactionData } from '../../data/mockData'
 export default function CustomerSatisfaction() {
   return (
     <div className="dashboard-card h-full">
-      <h3 className="text-lg font-bold text-[#2B3674] mb-4">Customer Satisfaction</h3>
+      <h3 className="text-lg font-bold text-text-primary mb-4">Customer Satisfaction</h3>
       <ResponsiveContainer width="100%" height={200}>
         <AreaChart data={customerSatisfactionData}>
           <defs>
             <linearGradient id="lastMonthGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#A3AED0" stopOpacity={0.15} />
-              <stop offset="95%" stopColor="#A3AED0" stopOpacity={0} />
+              <stop offset="5%" stopColor="var(--color-text-secondary)" stopOpacity={0.15} />
+              <stop offset="95%" stopColor="var(--color-text-secondary)" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="thisMonthGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#4318FF" stopOpacity={0.2} />
-              <stop offset="95%" stopColor="#4318FF" stopOpacity={0} />
+              <stop offset="5%" stopColor="var(--color-primary)" stopOpacity={0.2} />
+              <stop offset="95%" stopColor="var(--color-primary)" stopOpacity={0} />
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="#E9EDF7" vertical={false} />
@@ -41,7 +41,7 @@ export default function CustomerSatisfaction() {
             type="monotone"
             dataKey="lastMonth"
             name="Last Month"
-            stroke="#A3AED0"
+            stroke="var(--color-text-secondary)"
             strokeWidth={2}
             fill="url(#lastMonthGrad)"
             dot={false}
@@ -50,7 +50,7 @@ export default function CustomerSatisfaction() {
             type="monotone"
             dataKey="thisMonth"
             name="This Month"
-            stroke="#4318FF"
+            stroke="var(--color-primary)"
             strokeWidth={2}
             fill="url(#thisMonthGrad)"
             dot={false}
@@ -59,14 +59,14 @@ export default function CustomerSatisfaction() {
       </ResponsiveContainer>
       <div className="flex items-center justify-center gap-8 mt-3">
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#A3AED0]" />
-          <span className="text-xs text-[#A3AED0]">Last Month</span>
-          <span className="text-sm font-bold text-[#2B3674]">$3,004</span>
+          <span className="w-2.5 h-2.5 rounded-full bg-text-secondary" />
+          <span className="text-xs text-text-secondary">Last Month</span>
+          <span className="text-sm font-bold text-text-primary">$3,004</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#4318FF]" />
-          <span className="text-xs text-[#A3AED0]">This Month</span>
-          <span className="text-sm font-bold text-[#2B3674]">$4,504</span>
+          <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+          <span className="text-xs text-text-secondary">This Month</span>
+          <span className="text-sm font-bold text-text-primary">$4,504</span>
         </div>
       </div>
     </div>

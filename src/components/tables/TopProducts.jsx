@@ -7,16 +7,16 @@ export default function TopProducts() {
       <table className="w-full">
         <thead>
           <tr className="text-left">
-            <th className="text-[11px] font-medium text-[#A3AED0] pb-3 w-8">#</th>
-            <th className="text-[11px] font-medium text-[#A3AED0] pb-3">Name</th>
-            <th className="text-[11px] font-medium text-[#A3AED0] pb-3">Popularity</th>
-            <th className="text-[11px] font-medium text-[#A3AED0] pb-3 text-right">Sales</th>
+            <th className="text-[11px] font-medium text-text-secondary pb-3 w-8">#</th>
+            <th className="text-[11px] font-medium text-text-secondary pb-3">Name</th>
+            <th className="text-[11px] font-medium text-text-secondary pb-3">Popularity</th>
+            <th className="text-[11px] font-medium text-text-secondary pb-3 text-right">Sales</th>
           </tr>
         </thead>
         <tbody>
           {topProductsData.map((product) => (
             <tr key={product.rank} className="border-t border-[#F4F7FE]">
-              <td className="py-3.5 text-sm font-medium text-[#A3AED0]">{product.rank}</td>
+              <td className="py-3.5 text-sm font-medium text-text-secondary">{product.rank}</td>
               <td className="py-3.5 text-sm font-medium text-[#2B3674]">{product.name}</td>
               <td className="py-3.5 pr-4">
                 <div className="w-full bg-[#F4F7FE] rounded-full h-1.5">

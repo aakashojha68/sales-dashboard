@@ -20,7 +20,7 @@ const CustomDot = (props) => {
 export default function VisitorInsights() {
   return (
     <div className="dashboard-card h-full">
-      <h3 className="text-lg font-bold text-[#2B3674] mb-4">Visitor Insights</h3>
+      <h3 className="text-lg font-bold text-text-primary mb-4">Visitor Insights</h3>
       <ResponsiveContainer width="100%" height={200}>
         <LineChart data={visitorInsightsData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#E9EDF7" vertical={false} />
@@ -28,12 +28,12 @@ export default function VisitorInsights() {
             dataKey="month"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: '#A3AED0', fontSize: 11 }}
+            tick={{ fill: 'var(--color-text-secondary)', fontSize: 11 }}
           />
           <YAxis
             axisLine={false}
             tickLine={false}
-            tick={{ fill: '#A3AED0', fontSize: 11 }}
+            tick={{ fill: 'var(--color-text-secondary)', fontSize: 11 }}
           />
           <Tooltip
             contentStyle={{
@@ -47,13 +47,13 @@ export default function VisitorInsights() {
             verticalAlign="bottom"
             iconType="circle"
             iconSize={8}
-            wrapperStyle={{ fontSize: '11px', color: '#A3AED0', paddingTop: '12px' }}
+            wrapperStyle={{ fontSize: '11px', color: 'var(--color-text-secondary)', paddingTop: '12px' }}
           />
           <Line
             type="monotone"
             dataKey="loyal"
             name="Loyal Customers"
-            stroke="#4318FF"
+            stroke="var(--color-primary)"
             strokeWidth={3}
             dot={<CustomDot />}
             activeDot={{ r: 6, strokeWidth: 2 }}
@@ -62,7 +62,7 @@ export default function VisitorInsights() {
             type="monotone"
             dataKey="new"
             name="New Customers"
-            stroke="#05CD99"
+            stroke="var(--color-success)"
             strokeWidth={3}
             dot={<CustomDot />}
             activeDot={{ r: 6, strokeWidth: 2 }}
@@ -71,7 +71,7 @@ export default function VisitorInsights() {
             type="monotone"
             dataKey="unique"
             name="Unique Customers"
-            stroke="#EE5D50"
+            stroke="var(--color-danger)"
             strokeWidth={3}
             dot={<CustomDot />}
             activeDot={{ r: 6, strokeWidth: 2 }}

@@ -9,7 +9,7 @@ export default function Leaderboard() {
           <MdLeaderboard className="text-4xl text-[#4318FF]" />
         </div>
         <h2 className="text-xl font-bold text-[#2B3674] mb-2">Leaderboard</h2>
-        <p className="text-sm text-[#A3AED0] text-center max-w-md">
+        <p className="text-sm text-text-secondary text-center max-w-md">
           Track top performers and sales champions. This feature is coming soon with detailed rankings and performance metrics.
         </p>
       </div>

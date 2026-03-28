@@ -13,7 +13,7 @@ import { totalRevenueData } from '../../data/mockData'
 export default function TotalRevenue() {
   return (
     <div className="dashboard-card h-full">
-      <h3 className="text-lg font-bold text-[#2B3674] mb-4">Total Revenue</h3>
+      <h3 className="text-lg font-bold text-text-primary mb-4">Total Revenue</h3>
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={totalRevenueData} barGap={4} barSize={14}>
           <CartesianGrid strokeDasharray="3 3" stroke="#E9EDF7" vertical={false} />
@@ -21,12 +21,12 @@ export default function TotalRevenue() {
             dataKey="day"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: '#A3AED0', fontSize: 10 }}
+            tick={{ fill: 'var(--color-text-secondary)', fontSize: 10 }}
           />
           <YAxis
             axisLine={false}
             tickLine={false}
-            tick={{ fill: '#A3AED0', fontSize: 11 }}
+            tick={{ fill: 'var(--color-text-secondary)', fontSize: 11 }}
             tickFormatter={(v) => `${v / 1000}k`}
           />
           <Tooltip
@@ -42,10 +42,10 @@ export default function TotalRevenue() {
             verticalAlign="bottom"
             iconType="circle"
             iconSize={8}
-            wrapperStyle={{ fontSize: '11px', color: '#A3AED0', paddingTop: '12px' }}
+            wrapperStyle={{ fontSize: '11px', color: 'var(--color-text-secondary)', paddingTop: '12px' }}
           />
-          <Bar dataKey="online" name="Online Sales" fill="#4318FF" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="offline" name="Offline Sales" fill="#6AD2FF" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="online" name="Online Sales" fill="var(--color-primary)" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="offline" name="Offline Sales" fill="var(--color-info)" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

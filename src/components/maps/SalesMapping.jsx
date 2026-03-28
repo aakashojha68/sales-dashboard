@@ -40,7 +40,7 @@ export default function SalesMapping() {
               className="w-2 h-2 rounded-full"
               style={{ backgroundColor: item.color }}
             />
-            <span className="text-[10px] text-[#A3AED0]">{item.country}</span>
+            <span className="text-[10px] text-text-secondary">{item.country}</span>
           </div>
         ))}
       </div>

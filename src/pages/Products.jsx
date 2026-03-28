@@ -9,7 +9,7 @@ export default function Products() {
           <MdInventory className="text-4xl text-[#05CD99]" />
         </div>
         <h2 className="text-xl font-bold text-[#2B3674] mb-2">Products</h2>
-        <p className="text-sm text-[#A3AED0] text-center max-w-md">
+        <p className="text-sm text-text-secondary text-center max-w-md">
           Browse and manage your product catalog. This feature is coming soon with inventory management and product analytics.
         </p>
       </div>

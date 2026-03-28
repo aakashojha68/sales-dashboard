@@ -22,3 +22,12 @@ If you are developing a production application, we recommend using TypeScript wi
 3. Made sidebar & header design with static data
 4. Made dashboard with other components
 5. Implemented data table in orders tab with features - sorting, searching, filtering, skeleton loading, error handling.
+
+
+# Need TO DO
+1. make a common grid and use it in order table.
+2. work on pagination in grid.
+3. dropdown styling need to update
+4. Map Card is pending at dashboard.
+5. Some styling changes are pending in chart cards at dashboard
+6. Can design a Internet Connectivity issue hanlding page
