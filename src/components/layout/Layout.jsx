@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         <Header />
 
         {/* Page Content */}
-        <main className="flex-1 p-4 md:p-8 overflow-y-auto">
+        <main className="flex-1 p-4 lg:p-4 overflow-y-auto">
           {children}
         </main>
       </div>

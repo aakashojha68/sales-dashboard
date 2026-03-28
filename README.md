@@ -18,6 +18,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Project setup & flow
 1. Created react project using vite
-2. Installed all the required libraries with routing setup - AOS
-3. Made sidebar & header design with static data - AOS
-4. Made dashboard with other components - AOS
+2. Installed all the required libraries with routing setup
+3. Made sidebar & header design with static data
+4. Made dashboard with other components
+5. Implemented data table in orders tab with features - sorting, searching, filtering, skeleton loading, error handling.

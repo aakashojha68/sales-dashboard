@@ -77,6 +77,22 @@ body {
   box-shadow: 0 8px 24px rgba(43, 54, 116, 0.08);
 }
 
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.25s infinite linear forwards;
+  background: linear-gradient(to right, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+  background-size: 800px 104px;
+}
+
 /* Recharts tooltip styling */
 .recharts-default-tooltip {
   background: white !important;
