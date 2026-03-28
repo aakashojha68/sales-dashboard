@@ -55,13 +55,13 @@ export const visitorInsightsData = [
 ]
 
 export const totalRevenueData = [
-  { day: 'Monday', online: 15000, offline: 8000 },
-  { day: 'Tuesday', online: 10000, offline: 12000 },
-  { day: 'Wednesday', online: 20000, offline: 5000 },
-  { day: 'Thursday', online: 12000, offline: 18000 },
-  { day: 'Friday', online: 18000, offline: 10000 },
-  { day: 'Saturday', online: 22000, offline: 14000 },
-  { day: 'Sunday', online: 16000, offline: 9000 },
+  { day: 'Mon', online: 15000, offline: 8000 },
+  { day: 'Tue', online: 10000, offline: 12000 },
+  { day: 'Wed', online: 20000, offline: 5000 },
+  { day: 'Thu', online: 12000, offline: 18000 },
+  { day: 'Fri', online: 18000, offline: 10000 },
+  { day: 'Sat', online: 22000, offline: 14000 },
+  { day: 'Sun', online: 16000, offline: 9000 },
 ]
 
 export const customerSatisfactionData = [

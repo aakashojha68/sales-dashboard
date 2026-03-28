@@ -34,8 +34,8 @@ export default function Order() {
 
   // Derive unique cities for the filter
   const cities = useMemo(() => {
-    const list = users.map(u => u.address.city)
-    return ['All', ...new Set(list)].sort()
+    const list = users.map(u => u.address.city).sort();
+    return ['All', ...new Set(list)]
   }, [users])
 
   // Processed Users (Search -> Filter -> Sort)

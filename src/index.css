@@ -114,6 +114,7 @@ body {
   padding: 10px 14px !important;
 }
 
+g:focus,
 path:focus {
   outline: none !important;
 }
